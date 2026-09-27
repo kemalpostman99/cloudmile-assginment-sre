@@ -1,0 +1,11 @@
+replicaCount: 1
+image:
+  repository: your-dockerhub-user/nexus-gcs
+  tag: "3.96.3"
+  pullPolicy: IfNotPresent
+service:
+  type: LoadBalancer
+  port: 8081
+persistence:
+  size: 10Gi
+  accessMode: ReadWriteOnce
